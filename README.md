@@ -6,7 +6,7 @@ author: "Emmanuel de Jesus M. Depina Jr."
 
 # Introduction
 
-In our increasingly interconnected world, the importance of cybersecurity cannot be overstated. As technology evolves, so do the threats that accompany it, presenting a myriad of challenges for professionals in the field. Cybersecurity is not just about protecting data; it is also about navigating the complex ethical landscape that arises when technology intersects with security. This blog delves into the intricate world of cybersecurity, exploring ethical considerations, operating system security, access controls, network security, encryption, vulnerability management, and risk management. Join me as we uncover the critical elements that shape the cybersecurity landscape today.
+With the world becoming more interconnected, the importance of cybersecurity can never be over-emphasised. The evolution of technology brings with it, the evolution of the threats, as well, creating a host of challenges for the practitioners in the domain. Protection of data is only one aspect of cybersecurity; the other is the more difficult question of what to do when technology and security meet. In this blog, we take an in-depth look into the world of cybersecurity, including ethical hacking, operating system security, access controls, network security, encryption, vulnerability management, and risk management. Let us dive into the key pillars building the cybersecurity domain of today together.
 
 ---
 
@@ -138,10 +138,51 @@ Risk management encompasses quantitative and qualitative approaches to understan
 ---
 
 ## Conclusion
-
-As we navigate the complexities of cybersecurity, it is essential to remain vigilant and informed. The ethical considerations, technical challenges, and evolving threats require a comprehensive understanding and a proactive approach. By equipping ourselves with knowledge and resources, we can better protect our digital landscapes and foster a culture of security awareness. The journey into cybersecurity is ongoing, and together, we can rise to the challenge.
+With so much complexity in this age of computer security, we must be on the lookout and know what we are doing. Addressing the moral considerations, technological issues and ever-changing threats requires an inclusive understanding. You have to take the initiative on this. With knowledge and resources, it is possible to take better protection of our digital landscapes as well as nurture a security-aware culture. The path to cybersecurity isn't short or easy; let's face it together.
 
 ---
 
 **Author:** Emmanuel de Jesus M. Depina Jr.  
-**Education:** Bachelor of Science in Management/Finance, Park University; Cybersecurity, Champlain College.
+**Education:** Bachelor of Science in Management/Finance, Park University; Cybersecurity, Champlain College. Army Vet 
+
+<!-- Comment Section -->
+<div id="comments">
+    <h3>Leave a Comment</h3>
+    <form id="comment-form">
+        <textarea id="comment" rows="4" placeholder="Write your comment here..." required></textarea><br>
+        <label for="rating">Rate this article:</label>
+        <select id="rating" required>
+            <option value="">Select a rating</option>
+            <option value="5">5 - Excellent</option>
+            <option value="4">4 - Good</option>
+            <option value="3">3 - Average</option>
+            <option value="2">2 - Poor</option>
+            <option value="1">1 - Terrible</option>
+        </select><br>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="comment-list">
+        <h4>Comments:</h4>
+        <ul id="comments-display"></ul>
+    </div>
+</div>
+
+<script>
+    document.getElementById('comment-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const commentInput = document.getElementById('comment').value;
+        const ratingInput = document.getElementById('rating').value;
+
+        if (commentInput && ratingInput) {
+            const commentList = document.getElementById('comments-display');
+            const listItem = document.createElement('li');
+            listItem.textContent = `Rating: ${ratingInput} - Comment: ${commentInput}`;
+            commentList.appendChild(listItem);
+
+            // Clear the form
+            document.getElementById('comment').value = '';
+            document.getElementById('rating').value = '';
+        }
+    });
+</script>
