@@ -145,16 +145,6 @@ With so much complexity in this age of computer security, we must be on the look
 **Author:** Emmanuel de Jesus M. Depina Jr.  
 **Education:** Bachelor of Science in Management/Finance, Park University; Cybersecurity, Champlain College. Army Vet 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comment Section</title>
-</head>
-<body>
-
-<!-- Comment Section -->
 <div id="comments">
     <h3>Leave a Comment</h3>
     <form id="comment-form">
@@ -176,30 +166,23 @@ With so much complexity in this age of computer security, we must be on the look
     </div>
 </div>
 
-<!-- JavaScript to handle comment form submission -->
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        document.getElementById('comment-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent form from reloading the page
-            
-            const commentInput = document.getElementById('comment').value;
-            const ratingInput = document.getElementById('rating').value;
+    document.getElementById('comment-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const commentInput = document.getElementById('comment').value;
+        const ratingInput = document.getElementById('rating').value;
 
-            // Ensure both comment and rating are provided
-            if (commentInput && ratingInput) {
-                const commentList = document.getElementById('comments-display');
-                const listItem = document.createElement('li');
-                listItem.textContent = `Rating: ${ratingInput} - Comment: ${commentInput}`;
-                commentList.appendChild(listItem);
+        if (commentInput && ratingInput) {
+            const commentList = document.getElementById('comments-display');
+            const listItem = document.createElement('li');
+            listItem.textContent = `Rating: ${ratingInput} - Comment: ${commentInput}`;
+            commentList.appendChild(listItem);
 
-                // Clear the form fields after submission
-                document.getElementById('comment').value = '';
-                document.getElementById('rating').value = '';
-            }
-        });
+            // Clear the form
+            document.getElementById('comment').value = '';
+            document.getElementById('rating').value = '';
+        }
     });
 </script>
-
-</body>
-</html>
 
