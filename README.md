@@ -145,44 +145,4 @@ With so much complexity in this age of computer security, we must be on the look
 **Author:** Emmanuel de Jesus M. Depina Jr.  
 **Education:** Bachelor of Science in Management/Finance, Park University; Cybersecurity, Champlain College. Army Vet 
 
-<!-- Comment Section -->
-<div id="comments">
-    <h3>Leave a Comment</h3>
-    <form id="comment-form">
-        <textarea id="comment" rows="4" placeholder="Write your comment here..." required></textarea><br>
-        <label for="rating">Rate this article:</label>
-        <select id="rating" required>
-            <option value="">Select a rating</option>
-            <option value="5">5 - Excellent</option>
-            <option value="4">4 - Good</option>
-            <option value="3">3 - Average</option>
-            <option value="2">2 - Poor</option>
-            <option value="1">1 - Terrible</option>
-        </select><br>
-        <button type="submit">Submit</button>
-    </form>
-    <div id="comment-list">
-        <h4>Comments:</h4>
-        <ul id="comments-display"></ul>
-    </div>
-</div>
 
-<script>
-    document.getElementById('comment-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-        
-        const commentInput = document.getElementById('comment').value;
-        const ratingInput = document.getElementById('rating').value;
-
-        if (commentInput && ratingInput) {
-            const commentList = document.getElementById('comments-display');
-            const listItem = document.createElement('li');
-            listItem.textContent = `Rating: ${ratingInput} - Comment: ${commentInput}`;
-            commentList.appendChild(listItem);
-
-            // Clear the form
-            document.getElementById('comment').value = '';
-            document.getElementById('rating').value = '';
-        }
-    });
-</script>
