@@ -145,6 +145,7 @@ With so much complexity in this age of computer security, we must be on the look
 **Author:** Emmanuel de Jesus M. Depina Jr.  
 **Education:** Bachelor of Science in Management/Finance, Park University; Cybersecurity, Champlain College. Army Vet 
 
+<!-- Comment Section -->
 <div id="comments">
     <h3>Leave a Comment</h3>
     <form id="comment-form">
@@ -185,4 +186,5 @@ With so much complexity in this age of computer security, we must be on the look
         }
     });
 </script>
+
 
