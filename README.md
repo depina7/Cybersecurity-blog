@@ -50,7 +50,7 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2023 Emmanuel Jesus M. Depina</p>
+        <p>&copy; 2024 Emmanuel Jesus M. Depina</p>
     </footer>
 </body>
 </html>
